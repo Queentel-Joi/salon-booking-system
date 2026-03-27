@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxurious Salon - Premium beauty and wellness services. Book your appointment today for hair styling, nails, and beauty treatments.">
+    <title>Luxe Salon | Feel Beautiful, Inside & Out</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Luxe Salon</span>
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#booking">Book Now</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+        
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Feel Beautiful, Inside & Out</h1>
+            <p class="hero-description">
+                Experience luxury beauty treatments tailored to enhance your natural radiance. 
+                Our expert stylists are dedicated to making you look and feel your absolute best.
+            </p>
+            <a href="#booking" class="btn btn-primary">
+                <i class="fas fa-calendar-alt"></i> Book Appointment
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="section-header">
+            <h2>Our Premium Services</h2>
+            <p>Discover our range of luxurious treatments designed to pamper and rejuvenate</p>
+        </div>
+        
+        <div class="services-grid" id="servicesGrid">
+            <!-- Services will be loaded dynamically -->
+            <div class="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Loading services...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Welcome to Luxe Salon</h2>
+                <p>
+                    At Luxe Salon, we believe that true beauty comes from within, and our mission is to help you 
+                    express that inner radiance through exceptional beauty care. Our team of skilled professionals 
+                    combines artistry with the latest techniques to deliver results that exceed your expectations.
+                </p>
+                <p>
+                    With over a decade of experience in the beauty industry, we've created a sanctuary where 
+                    you can escape the everyday hustle and indulge in premium treatments that leave you feeling 
+                    refreshed, confident, and absolutely beautiful.
+                </p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div>
+                            <h4>Expert Stylists</h4>
+                            <p>Certified professionals</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div>
+                            <h4>Premium Products</h4>
+                            <p>Only the finest brands</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4>Personalized Care</h4>
+                            <p>Tailored to your needs</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <h4>Luxury Experience</h4>
+                            <p>5-star service always</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <div class="about-image-placeholder">
+                    <i class="fas fa-cut"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking-section" id="booking">
+        <div class="booking-container">
+            <div class="booking-info">
+                <h2>Book Your Appointment</h2>
+                <p>
+                    Ready to experience the Luxe difference? Schedule your appointment today and let our 
+                    experts take care of you. We offer flexible booking options to fit your busy lifestyle.
+                </p>
+                
+                <div class="booking-contact">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Beauty Avenue, Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+254 700 123 456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@luxesalon.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="booking-form-container">
+                <form class="booking-form" id="bookingForm">
+                    <h3>Schedule Your Visit</h3>
+                    
+                    <div class="form-group">
+                        <label for="customerName">
+                            <i class="fas fa-user"></i> Your Name
+                        </label>
+                        <input 
+                            type="text" 
+                            id="customerName" 
+                            name="customerName" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceSelect">
+                            <i class="fas fa-spa"></i> Select Service
+                        </label>
+                        <select id="serviceSelect" name="serviceSelect" required>
+                            <option value="">Choose a service...</option>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingDate">
+                                <i class="fas fa-calendar"></i> Date
+                            </label>
+                            <input 
+                                type="date" 
+                                id="bookingDate" 
+                                name="bookingDate" 
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bookingTime">
+                                <i class="fas fa-clock"></i> Time
+                            </label>
+                            <input 
+                                type="time" 
+                                id="bookingTime" 
+                                name="bookingTime" 
+                                required
+                            >
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-check-circle"></i> Confirm Booking
+                    </button>
+                    
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>✦ Luxe Salon</h3>
+                <p>
+                    Your premier destination for luxury beauty treatments. 
+                    We're committed to helping you look and feel your absolute best.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Hair Styling</a></li>
+                    <li><a href="#services">Nail Care</a></li>
+                    <li><a href="#services">Facials</a></li>
+                    <li><a href="#services">Massage</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+254700123456">+254 700 123 456</a></li>
+                    <li><a href="mailto:hello@luxesalon.com">hello@luxesalon.com</a></li>
+                    <li><a href="#">123 Beauty Avenue</a></li>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luxe Salon. All rights reserved. | Designed with <i class="fas fa-heart text-gold"></i> for beauty lovers</p>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

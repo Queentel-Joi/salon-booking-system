@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from extensions import db
 from routes.service_routes import service_routes
 from routes.booking_routes import booking_routes  # make sure booking_routes is correct
@@ -6,6 +7,9 @@ from routes.booking_routes import booking_routes  # make sure booking_routes is 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///salon.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Enable CORS for all routes
+CORS(app)
 
 db.init_app(app)
 

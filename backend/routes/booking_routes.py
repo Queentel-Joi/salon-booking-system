@@ -50,3 +50,16 @@ def get_bookings():
             "booking_time": b.booking_time.strftime("%Y-%m-%d %H:%M:%S")
         })
     return jsonify(result), 200
+
+# DELETE a booking
+@booking_routes.route("/bookings/<int:booking_id>", methods=["DELETE"])
+def delete_booking(booking_id):
+    booking = Booking.query.get(booking_id)
+    
+    if not booking:
+        return {"error": "Booking not found"}, 404
+    
+    db.session.delete(booking)
+    db.session.commit()
+    
+    return {"message": "Booking deleted successfully!"}, 200

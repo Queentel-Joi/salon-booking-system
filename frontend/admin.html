@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxe Salon Admin Dashboard - Manage bookings and appointments">
+    <title>Luxe Salon | Admin Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Luxe Salon</span>
+        </a>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#booking">Book Now</a></li>
+            <li><a href="admin.html" class="active">Admin</a></li>
+        </ul>
+        
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Admin Container -->
+    <div class="admin-container">
+        <!-- Admin Header -->
+        <div class="admin-header">
+            <h1><i class="fas fa-crown"></i> Admin Dashboard</h1>
+            <p>Manage your salon bookings and appointments</p>
+        </div>
+
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <!-- Stats Cards -->
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalBookings">0</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalCustomers">0</h3>
+                        <p>Customers</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalServices">0</h3>
+                        <p>Services</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="todayBookings">0</h3>
+                        <p>Today's Bookings</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bookings Table -->
+            <div class="bookings-table-container">
+                <div class="table-header">
+                    <h2><i class="fas fa-list"></i> All Bookings</h2>
+                    <button class="btn-refresh" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+                
+                <div id="bookingsTableWrapper">
+                    <table class="bookings-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer Name</th>
+                                <th>Service</th>
+                                <th>Booking Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTableBody">
+                            <!-- Bookings will be loaded dynamically -->
+                        </tbody>
+                    </table>
+                    
+                    <div class="empty-state" id="emptyState" style="display: none;">
+                        <div class="empty-state-icon">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <h3>No Bookings Yet</h3>
+                        <p>When customers book appointments, they will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>✦ Luxe Salon</h3>
+                <p>
+                    Your premier destination for luxury beauty treatments. 
+                    We're committed to helping you look and feel your absolute best.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#booking">Book Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#services">Hair Styling</a></li>
+                    <li><a href="index.html#services">Nail Care</a></li>
+                    <li><a href="index.html#services">Facials</a></li>
+                    <li><a href="index.html#services">Massage</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+254700123456">+254 700 123 456</a></li>
+                    <li><a href="mailto:hello@luxesalon.com">hello@luxesalon.com</a></li>
+                    <li><a href="#">123 Beauty Avenue</a></li>
+                    <li><a href="#">Nairobi, Kenya</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Luxe Salon. All rights reserved. | Designed with <i class="fas fa-heart text-gold"></i> for beauty lovers</p>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
